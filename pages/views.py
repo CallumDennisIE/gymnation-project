@@ -18,9 +18,6 @@ class PostDetail(View):
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
-        disliked = False
-        if post.dislikes.filter(id=self.request.user.id).exists():
-            disliked = True
 
         return render(
             request,
@@ -28,7 +25,6 @@ class PostDetail(View):
             {
                 'post': post,
                 'comments': comments,
-                'liked': liked,
-                'disliked': disliked
+                'liked': liked
             }
         )

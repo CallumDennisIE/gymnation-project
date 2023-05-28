@@ -15,8 +15,6 @@ class Post(models.Model):
     excerpt = models.TextField(blank=True)
     status = models.IntegerField(choices=ARTICLE_STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
-    dislikes = models.ManyToManyField(
-        User, related_name='blog_dislikes', blank=True)
 
     class Meta:
         ordering = ['-created_on']
@@ -25,7 +23,7 @@ class Post(models.Model):
         return self.title
 
     def number_of_likes(self):
-        return self.likes.count() - self.dislikes.count()
+        return self.likes.count()
 
 
 class Comment (models.Model):
