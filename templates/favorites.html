@@ -7,17 +7,19 @@
     <div class="col-md-4">
         <div class="card mb-4">
             <div class="card-body">
-                <div class="image-container">
-                    {% if "placeholder" in post.featured_image.url %}
-                    <img class="card-img-top"
-                        src="https://res.cloudinary.com/ddsq9twbk/image/upload/v1685465237/placeholder-image_rcrjzv.jpg">
-                    {% else %}
-                    <img class="card-img-top" src=" {{ post.featured_image.url }}">
-                    {% endif %}
-                    <div class="image-flash">
-                        <p class="author">Author: {{ post.author }}</p>
+                <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                    <div class="image-container">
+                        {% if "placeholder" in post.featured_image.url %}
+                        <img class="card-img-top"
+                            src="https://res.cloudinary.com/ddsq9twbk/image/upload/v1685465237/placeholder-image_rcrjzv.jpg">
+                        {% else %}
+                        <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                        {% endif %}
+                        <div class="image-flash">
+                            <p class="author">Author: {{ post.author }}</p>
+                        </div>
                     </div>
-                </div>
+                </a>
                 <a href="{% url 'post_detail' post.slug %}" class="post-link">
                     <h2 class="card-title">{{ post.title }}</h2>
                     <p class="card-text">{{ post.excerpt|safe }}</p>
