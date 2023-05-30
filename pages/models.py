@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from cloudinary.models import CloudinaryField
 
 ARTICLE_STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -15,6 +16,7 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     content = models.TextField()
     excerpt = models.TextField(blank=True)
+    featured_image = CloudinaryField('image', default='placeholder')
     status = models.IntegerField(choices=ARTICLE_STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
 
