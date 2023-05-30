@@ -1,4 +1,5 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.contrib.auth.decorators import login_required
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
@@ -75,3 +76,35 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+@login_required
+def favorite_posts(request):
+    user_profile = request.user.userprofile
+    favorite_posts = user_profile.favorites.all()
+
+    return render(request, 'favorites.html', {'favorite_posts': favorite_posts})
+
+
+@login_required
+def add_favorite(request, slug):
+    post = get_object_or_404(Post, slug=slug)
+    user_profile = request.user.userprofile
+
+    # Add the post to the user's favorites
+    user_profile.favorites.add(post)
+
+    # Redirect to the post detail page
+    return redirect('post_detail', slug=slug)
+
+
+@login_required
+def remove_favorite(request, slug):
+    post = get_object_or_404(Post, slug=slug)
+    user_profile = request.user.userprofile
+
+    # Remove the post from the user's favorites
+    user_profile.favorites.remove(post)
+
+    # Redirect to the post detail page
+    return redirect('post_detail', slug=slug)

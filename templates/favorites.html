@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if favorite_posts %}
+<ul>
+    {% for post in favorite_posts %}
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="image-container">
+                    <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                    <div class="image-flash">
+                        <p class="author">Author: {{ post.author }}</p>
+                    </div>
+                </div>
+                <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                    <h2 class="card-title">{{ post.title }}</h2>
+                    <p class="card-text">{{ post.excerpt|safe }}</p>
+                </a>
+                <hr />
+                <p class="card-text text-muted h6">{{ post.created_on}} <i class="fa-regular fa-thumbs-up"></i>
+                    {{ post.number_of_likes }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No favorites yet.</p>
+{% endif %}
+{%endblock%}

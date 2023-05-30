@@ -54,6 +54,16 @@
                             {{ total_comments }}</strong>
                         {% endwith %}
                     </div>
+                    <div class="col">
+                        {% if user.is_authenticated %}
+                        {% if post in request.user.userprofile.favorites.all %}
+                        <a href="{% url 'remove_favorite' post.slug %}">Remove Favorite</a>
+                        {% else %}
+                        <a href="{% url 'add_favorite' post.slug %}">Add to Favorites</a>
+                        {% endif %}
+                        {% endif %}
+
+                    </div>
                 </div>
             </div>
         </div>
