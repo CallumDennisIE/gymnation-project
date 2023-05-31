@@ -20,6 +20,14 @@
     - [Deploying the Site:](#deploying-the-site)
     - [Local Development](#local-development)
   - [Testing](#testing)
+    - [Favorite feature:](#favorite-feature)
+      - [Adding a Favorite:](#adding-a-favorite)
+      - [View Favorites:](#view-favorites)
+      - [Remove a Favorite](#remove-a-favorite)
+      - [Favorite Persistence](#favorite-persistence)
+      - [Add to Favorites when not Logged in](#add-to-favorites-when-not-logged-in)
+      - [Add to Favorites when not Logged in](#add-to-favorites-when-not-logged-in-1)
+      - [View Favorites when not logged in](#view-favorites-when-not-logged-in)
   - [Credits](#credits)
 
 ## About
@@ -65,6 +73,7 @@ Gymnation is a blog targeted towards athletes and gym enthusiasts, providing the
 - FontAwesome - Font and Icon Library
 - Bootsrap - Front-end Framework
 - Pexels - Article Images source
+- ChatGPT - Write blog articles and suggest usernames
 
 ## Deployment & Local Development
 
@@ -96,7 +105,7 @@ os.environ["CLOUDINARY_URL"] = 'ENTER_CLOUDINARY_URL_HERE'
 ### Deploying the Site:
 
 - To deploy the site, Heorku was used for this project.
-- cREATE A hEROKU app from the copy of this repository
+- Create A Heroku app from the copy of this repository
 - The Database URL, CloudInary API key and secret key will have to be added as config vars on the Heroku App.
 
 ### Local Development
@@ -120,6 +129,91 @@ Steps to clone this project using GitHub:
 For more information on how to clone a GitHub repository please click [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
 ## Testing
+
+### Favorite feature:
+
+#### Adding a Favorite:
+
+Test Steps:
+
+- Login to the Gymnation as a user
+- Click on a Article
+- Click on the "Add to Favorites" button.
+- Click on the "Favorites" link
+- Verify that the Article is added to the user's favorites.
+
+Outcome: Success
+
+#### View Favorites:
+
+Test Steps:
+
+- Login to the Gymnation as a user
+- Click on the "Favorites" link
+- Verify that all of the favorites are shown
+- Click on a Article
+- Verify that the Article detail section matches the Article details
+- Verify that when logged in as a different user, that different favorites are shown.
+
+Outcome: Success
+
+#### Remove a Favorite
+
+Test Steps:
+
+- Login to the Gymnation as a user
+- Click on the "Favorites" link
+- Verify that all of the favorites are shown
+- Click on a Article
+- Click the 'Remove favorite' button
+- Click on the "Favorites" link again
+- Verify that the Article does not show in the favorites after it is removed.
+
+Outcome: Success
+
+#### Favorite Persistence
+
+Test Steps:
+
+- Login to the Gymnation as a user
+- Click on a Article
+- Click the 'Add to favorites' button
+- Click on the "Favorites" link
+- Verify that the Article is added to the favorites link
+- Logout and login again as the same user
+- Click on the "Favorites" link
+- Verify that the favorite post remains
+
+Outcome: Success
+
+#### Add to Favorites when not Logged in
+
+Test Steps:
+
+- Visit the Gymnation site without logging in
+- Click on a Article
+- Verify that the 'Add to favorites' button does not appear
+
+Outcome: Success
+
+#### Add to Favorites when not Logged in
+
+Test Steps:
+
+- Visit the Gymnation site without logging in
+- Click on a Article
+- Verify that the 'Remove favorite' button does not appear
+
+Outcome: Success
+
+#### View Favorites when not logged in
+
+Test Steps:
+
+- Visit the Gymnation site without logging in
+- Verify that the 'Favorites' link does not appear
+
+Outcome: Success
 
 ## Credits
 
