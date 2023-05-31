@@ -19,6 +19,8 @@
 
 ## About
 
+Gymnation is a blog targeted towards athletes and gym enthusiasts, providing them with useful and inspirational content to help motivate them towards their goals. Users can browse posts from different authors, like and comment on posts to engage with the content and also favourite certain posts so that they can view them again later, without having to search through them again.
+
 ## User Experience
 
 ### User Stories
