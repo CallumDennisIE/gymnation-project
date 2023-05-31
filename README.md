@@ -14,6 +14,11 @@
     - [Languages Used](#languages-used)
     - [Frameworks, Libraries \& Programs Used](#frameworks-libraries--programs-used)
   - [Deployment \& Local Development](#deployment--local-development)
+    - [Database Creation:](#database-creation)
+    - [Image Hosting:](#image-hosting)
+    - [Setting up for deployment in Django:](#setting-up-for-deployment-in-django)
+    - [Deploying the Site:](#deploying-the-site)
+    - [Local Development](#local-development)
   - [Testing](#testing)
   - [Credits](#credits)
 
@@ -62,6 +67,57 @@ Gymnation is a blog targeted towards athletes and gym enthusiasts, providing the
 - Pexels - Article Images source
 
 ## Deployment & Local Development
+
+### Database Creation:
+
+- For this project ElephantSQL was used for a PostgreSQL database.
+- Once created, The Database URL will have to be copied.
+
+### Image Hosting:
+
+- Cloudinary was used for image hosting on the project.
+- Once an account is created, the API key will have to be stored.
+
+### Setting up for deployment in Django:
+
+- A Procfile will need to be created for the site.
+- The requirements in the requirements.txt wile will have to be installed, using the following command:
+- `$ pip install -r requirements.txt`
+- An `env.py` file will need to be created to store the configuration variables, here is an example:
+
+```
+import os
+
+os.environ["DATABASE_URL"] = 'ENTER_DATABASE_URL_HERE'
+os.environ["SECRET_KEY"] = 'ENTER_SECRET_KEY_HERE'
+os.environ["CLOUDINARY_URL"] = 'ENTER_CLOUDINARY_URL_HERE'
+```
+
+### Deploying the Site:
+
+- To deploy the site, Heorku was used for this project.
+- cREATE A hEROKU app from the copy of this repository
+- The Database URL, CloudInary API key and secret key will have to be added as config vars on the Heroku App.
+
+### Local Development
+
+Steps to fork this project using GitHub:
+
+1. Navigate to the GitHub repository for this project.
+2. Click the 'Fork' button (top right-hand side of the repository page).
+
+For more information on how to fork a GitHub repository please click [here](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+
+Steps to clone this project using GitHub:
+
+1. Navigate to the GitHub repository for this project.
+2. Click on the 'Code' button, located above the project files.
+3. Select 'HTTPS' as the method to clone the repository.
+4. Copy the link provided, located under 'HTTPS'.
+5. Open the Terminal in the location you would like the repository to be cloned to.
+6. Type `git clone` and then the link provided in step 4
+
+For more information on how to clone a GitHub repository please click [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
 ## Testing
 
