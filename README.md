@@ -9,7 +9,8 @@
   - [About](#about)
   - [User Experience](#user-experience)
     - [User Stories](#user-stories)
-  - [Features](#features)
+  - [Custom Features](#custom-features)
+    - [Favorites](#favorites)
   - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
     - [Frameworks, Libraries \& Programs Used](#frameworks-libraries--programs-used)
@@ -50,7 +51,11 @@ Gymnation is a blog targeted towards athletes and gym enthusiasts, providing the
 - As an **administrator**, I want to be able to **moderate user comments** to **ensure a positive and respectful community environment within the blog.**
 - As a **registered user** of the fitness blog website, I want to be able to **favorite certain posts**, so that I can **easily find and view them** again later.
 
-## Features
+## Custom Features
+
+### Favorites
+
+The Gymnation project is based on the Code Institute I Think Therefore I Blog Walkthrough Project. A custom model and function has been created to allow users to favorite posts and view them again later.
 
 ## Technologies Used
 
