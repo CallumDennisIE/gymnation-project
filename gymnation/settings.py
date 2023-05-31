@@ -17,7 +17,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-X_FRAME_OPTIONS = ''
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['8000-callumdennisie-gymnation-39ayalftu9.us2.codeanyapp.com',
                  'gymnation-project.herokuapp.com', 'localhost']
