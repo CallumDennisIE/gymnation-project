@@ -1,6 +1,7 @@
 # Gymnation Blog
 
 ![Gymnation blog on desktop](/media/images/desktop-image.png)
+[View Deployed Site here:](https://gymnation-project.herokuapp.com/)
 
 ## Contents
 
@@ -55,7 +56,9 @@ Gymnation is a blog targeted towards athletes and gym enthusiasts, providing the
 
 ### Favorites
 
-The Gymnation project is based on the Code Institute I Think Therefore I Blog Walkthrough Project. A custom model and function has been created to allow users to favorite posts and view them again later.
+The Gymnation project is based on the Code Institute I Think Therefore I Blog Walkthrough Project. A custom model and function has been created to allow users to favorite posts and view them again later. This allows users to save posts that they enjoy without having to scroll through all of the posts again to view them.
+
+The feature allows users to add posts to favorites and remove them. There is also a seperate page where all of the users favorite posts can be viewed. This is on a per User Account basis, meaning that one users favorites can be different from another and they are persistent even after logging in and out.
 
 ## Technologies Used
 
