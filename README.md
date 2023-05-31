@@ -33,6 +33,7 @@
 - As an **administrator** of the fitness blog website, I want to be able to **create draft articles** so that **I can work on them at my convenience and finish them later**. Once I am satisfied with the draft, I should have the ability to publish it and make it visible to the readers of the fitness blog.
 - As an **administrator** of the fitness blog website, I want to be able to **create, update and delete new articles** to **share valuable content with the readers.** I want the ability to publish the article, making it visible to the visitors and readers of the fitness blog. I also want to be able to delete and update articles after they have been created.
 - As an **administrator**, I want to be able to **moderate user comments** to **ensure a positive and respectful community environment within the blog.**
+- As a **registered user** of the fitness blog website, I want to be able to **favorite certain posts**, so that I can **easily find and view them** again later.
 
 ## Features
 
